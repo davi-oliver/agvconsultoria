@@ -146,7 +146,7 @@ export function LandingPageComponent() {
         <div className="container mx-auto text-center">
           <p>&copy; 2024 Consultor Junior. Todos os direitos reservados.</p>
           <div className="flex justify-center mt-4 space-x-4">
-            <a href="daviot.dev@gmail.com" className="flex items-center">
+            <a href="mailto:daviot.dev@gmail.com" className="flex items-center">
               <Mail className="w-5 h-5 mr-2" />
               daviot.dev@gmail.com
             </a>
@@ -155,11 +155,7 @@ export function LandingPageComponent() {
               +55 (021) 9 96742-3208
             </a>
           </div>
-          <div className="mt-4">
-            <a href="https://instagram.com/daviot.dev" className="text-white hover:text-yellow-300">
-              <Instagram className="w-6 h-6" />
-            </a>
-          </div>
+
 
 
         </div>
