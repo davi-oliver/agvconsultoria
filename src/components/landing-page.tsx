@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Shield, Star, Phone, Mail, Instagram } from 'lucide-react'
+import { Shield, Star, Phone, Mail, Instagram, MessageSquare, Briefcase, Home } from 'lucide-react'
 import { useToast } from '@chakra-ui/react'
 
 export function LandingPageComponent() {
@@ -35,14 +35,26 @@ export function LandingPageComponent() {
   return (
     <div className="min-h-screen flex flex-col bg-blue-900">
       <header className="bg-gray-900 text-white py-4">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="text-2xl font-bold">Universo AGV</div>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#home" className="hover:text-yellow-300">Inicio</a></li>
-              <li><a href="#services" className="hover:text-yellow-300">Serviços</a></li>
-              <li><a href="#testimonials" className="hover:text-yellow-300">Feedback</a></li>
-              <li><a href="#contact" className="hover:text-yellow-300">Contato</a></li>
+          <nav className="w-full md:w-auto">
+            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+              <li className="flex items-center">
+                <Home className="w-5 h-5 mr-2" />
+                <a href="#home" className="hover:text-yellow-300">Inicio</a>
+              </li>
+              <li className="flex items-center">
+                <Briefcase className="w-5 h-5 mr-2" />
+                <a href="#services" className="hover:text-yellow-300">Serviços</a>
+              </li>
+              <li className="flex items-center">
+                <MessageSquare className="w-5 h-5 mr-2" />
+                <a href="#testimonials" className="hover:text-yellow-300">Feedback</a>
+              </li>
+              <li className="flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                <a href="#contact" className="hover:text-yellow-300">Contato</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -52,12 +64,7 @@ export function LandingPageComponent() {
         <section
           id="home"
           className="relative bg-blue-900 text-white py-40"
-          style={{
-            backgroundImage: "url('/home.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat"
-          }}
+
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative container mx-auto text-end">
