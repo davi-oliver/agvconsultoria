@@ -38,15 +38,37 @@ export function LandingPageComponent() {
     }
 
     const messageurl = encodeURIComponent(message);
-    const url = `https://api.whatsapp.com/send/?phone=5521967423208&text=${messageurl}&type=phone_number&app_absent=0`;
-    window.open(url, '_blank');
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=5521967423208&text=${messageurl}&type=phone_number&app_absent=0`;
+    const whatsappAppUrl = `whatsapp://send?phone=5521967423208&text=${messageurl}`;
+
+    // Verifica se o navegador é o WebView do Instagram
+    const isInstagramWebView = navigator.userAgent.includes("Instagram");
+
+    if (isInstagramWebView) {
+      // Redireciona para o aplicativo do WhatsApp
+      window.location.href = whatsappAppUrl;
+    } else {
+      // Abre o link do WhatsApp no navegador
+      window.open(whatsappUrl, '_blank');
+    }
   }
 
   const faleconosco = () => {
-    const url = `https://api.whatsapp.com/send/?phone=5521967423208&text=Olá!&type=phone_number&app_absent=0`;
-    window.open(url, '_blank');
-  }
+    const messagee = "Olá, gostaria de falar com um consultor da AGV Consultoria.";
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=5521967423208&text=${messagee}&type=phone_number&app_absent=0`;
+    const whatsappAppUrl = `whatsapp://send?phone=5521967423208&text=${messagee}`;
 
+    // Verifica se o navegador é o WebView do Instagram
+    const isInstagramWebView = navigator.userAgent.includes("Instagram");
+
+    if (isInstagramWebView) {
+      // Redireciona para o aplicativo do WhatsApp
+      window.location.href = whatsappAppUrl;
+    } else {
+      // Abre o link do WhatsApp no navegador
+      window.open(whatsappUrl, '_blank');
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-blue-900">
